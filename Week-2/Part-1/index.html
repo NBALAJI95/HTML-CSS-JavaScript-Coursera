@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Guessing Game</title>
+</head>
+<body onload="color_game()">
+<script>
+    /**
+     * Created by Balaji_N on 3/11/2017.
+     */
+
+    color = ['blue', 'cyan', 'gold', 'gray' ,'green', 'magenta', 'orange', 'red', 'white', 'yellow'];
+    count = 0;
+
+    function inColors(input) {
+        i = 0;
+        while(i < color.length) {
+            //console.log(input, color[i])
+            if(input==color[i])
+                return true;
+            i++;
+        }
+        return false
+    }
+
+    function checkInput(inp, answer) {
+        if(!inColors(inp))
+        {
+            alert('I dont recognize');
+            return false;
+        }
+        else if (inp == answer) {
+            //alert('Congratulations! You have guessed the color!\n'+'It took you ' + count + ' guesses to finish the game!\n You can see the color in the background');
+            //document.body.style.backgroundColor = answer;
+            return true;
+        }
+
+        else {
+            return false;
+        }
+    }
+
+    function color_game() {
+        target_index = Math.random() * color.length;
+        target_index = Math.floor(target_index);
+        alert(color[target_index]);
+        do {
+            guess_input = prompt('I am thinking of one of these colors:\n\n' + String(color) + '\n\nWhat color am I thinking of?');
+            count++;
+        }while(!checkInput(guess_input, color[target_index]));
+    }
+</script>
+</body>
+</html>
