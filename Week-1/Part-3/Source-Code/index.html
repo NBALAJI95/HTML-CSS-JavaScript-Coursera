@@ -26,9 +26,9 @@
             <label for="name"> Name: </label>
             <input type="text" name="name" id="name" placeholder="Your full name">
             <br/>
-            <label for="Male"> Gender: </label>
-            <input type="checkbox" name="gender" id="Male" value="Male"> Male
-            <input type="checkbox" name="gender" id="Female" value="Female"> Female
+            <label> Gender: </label>
+            <input type="radio" name="gender" id="Male" value="Male"> <label for="male"> Male </label>
+            <input type="radio" name="gender" id="Female" value="Female"> <label for="Female"> Female </label>
             <br/>
             <label for="age"> Age: </label>
             <input type="number" value="18" id="age" name="age">
@@ -73,9 +73,9 @@
             <textarea autocomplete="on" id="address" name="text_ar"></textarea>
             <br>
             <label for="e_mail">Method to contact you: &nbsp</label>
-            <input type="checkbox" name="contact_method" id="e_mail"> Email
-            <input type="checkbox" name="contact_method"> Whatsapp
-            <input type="checkbox" name="contact_method"> In-app chat
+            <input type="checkbox" name="contact_method" id="e_mail"> <label for="e_mail"> Email </label>
+            <input type="checkbox" name="contact_method" id="whatsapp"> <label for="whatsapp"> Whatsapp </label>
+            <input type="checkbox" name="contact_method" id="contact"> <label for="contact"> In-app chat </label>
         </fieldset>
         <input type="submit">
     </form>
